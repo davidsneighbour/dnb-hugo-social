@@ -1,0 +1,62 @@
+{{- $config := site.Data.dnb.social.twitter -}}
+{{- $page := false -}}
+{{- if .IsPage -}}{{- $page = true -}}{{- end -}}
+<!-- Twitter meta data generation.
+     see https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup for details                -->
+<!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards                          -->
+<!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image         -->
+<!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup                                -->
+<!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started                         -->
+<!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup                                -->
+<!-- *************************************************************************************************************** -->
+{{- if isset $config "profile" -}}
+<!-- without defining a profile name we won't need any twitter header tags                                           -->
+  <meta name="twitter:site" content="@{{- $config.profile -}}" />
+  <meta name="twitter:title" content="{{- .Title -}}" />
+{{/*  {{- range site.Authors -}}*/}}
+{{/*    {{- with .twitter -}}*/}}
+{{/*      <meta name="twitter:creator" content="@{{- . -}}"/>*/}}
+{{/*    {{- end -}}*/}}
+{{/*  {{- end -}}*/}}
+  {{- with $config.domain -}}
+    <meta name="twitter:domain" content="{{- . -}}" />
+  {{- end -}}
+  <meta name="twitter:description" content="
+    {{- with .Description -}}
+      {{- . -}}
+    {{- else -}}
+      {{- if $page -}}
+        {{- .Summary -}}
+      {{- else -}}
+        {{- with .Site.Params.description -}}
+          {{- . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  "/>
+  <!-- check if image available is large enough                                                                      -->
+  {{- $card := "summary_large_image" -}}
+{{/*  {{- if eq $card "something" -}}*/}}
+{{/*    {{- $card = "summary" -}}*/}}
+{{/*  {{- end -}}*/}}
+  <meta name="twitter:card" content="{{- $card -}}" />
+  <!-- create images for twitter cards                                                                               -->
+  {{/*<meta name="twitter:image:src" content="{{ .Params.og_image }}"/>*/}}
+  {{ $resize := "876x438" }}
+  {{- with $.Params.images -}}
+    <meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
+  {{ else -}}
+    {{- $images := $.Resources.ByType "image" -}}
+    {{- $featured := $images.GetMatch "*feature*" -}}
+    {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+      {{- with $featured -}}
+        <meta name="twitter:image" content="{{ $featured.Permalink }}"/>
+      {{- else -}}
+      {{- with $.Site.Params.images -}}
+        <meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
+      {{- end -}}
+    {{- end -}}
+  {{- end }}
+{{- else -}}
+  {{ warnf "There is no Twitter profile defined. You need to add a data/dnb/social/twitter.toml configuration!" . }}
+{{- end -}}

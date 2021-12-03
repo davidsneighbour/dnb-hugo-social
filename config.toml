@@ -1,0 +1,26 @@
+################################################################################
+# configuration
+################################################################################
+[module.hugoVersion]
+extended = false
+min = "0.84.0"
+
+[[module.mounts]]
+source = "layouts"
+target = "layouts"
+
+[[module.mounts]]
+source = "i18n"
+target = "i18n"
+
+[[module.imports]]
+disable = false
+ignoreConfig = false
+ignoreImports = false
+path = "github.com/dnb-org/dnb-hugo-functions"
+
+[[module.imports]]
+disable = false
+ignoreConfig = false
+ignoreImports = false
+path = "github.com/dnb-org/debug"
