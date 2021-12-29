@@ -1,6 +1,11 @@
-> :warning: Note: This is work in progress. Use at your own discretion. If you have any questions or suggestions feel free to open an issue.
+<!--- CARD BEGIN --->
 
-# DNB Hugo Components / Social
+![DNB-Hugo/HEAD](.github/github-card-dark.png#gh-dark-mode-only)
+![DNB-Hugo/HEAD](.github/github-card-light.png#gh-light-mode-only)
+
+<!--- CARD END --->
+
+# DNB GoHugo Component / Social
 
 Social Media functions for Hugo
 
