@@ -23,4 +23,4 @@ path = "github.com/dnb-org/dnb-hugo-functions"
 disable = false
 ignoreConfig = false
 ignoreImports = false
-path = "github.com/dnb-org/debug"
+path = "github.com/dnb-org/dnb-hugo-debug"
