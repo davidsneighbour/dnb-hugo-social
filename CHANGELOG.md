@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/dnb-org/dnb-hugo-sitemap/compare/v0.0.6...v0.0.7) (2022-02-07)
+
+
+### Chore
+
+* **deps:** update dependencies ([e9e8afc](https://github.com/dnb-org/dnb-hugo-sitemap/commit/e9e8afc003b7a801e4a19aa71eefae5a5232af65))
+
 ### [0.0.6](https://github.com/dnb-org/dnb-hugo-sitemap/compare/v0.0.5...v0.0.6) (2022-02-07)
 
 
