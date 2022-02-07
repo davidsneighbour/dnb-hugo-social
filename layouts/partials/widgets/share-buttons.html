@@ -1,0 +1,56 @@
+{{- $context := . -}}
+
+{{ $networks := slice }}
+{{ with site.Params.dnb.social.sharebuttons.networks }}
+  {{ $networks = . }}
+{{ end }}
+
+ {{ $setups := site.Data.dnb.social.shares.items}}
+{{/*
+{{ $setups := $setups | intersect (where $setup in $networks) }} */}}
+
+
+<div class="is--sharebuttons">
+  {{- range $network, $setup := $setups -}}
+    {{- $separator := "&" -}}
+    {{ $icon := false }}
+    {{ with $setup.icon }}
+      {{- $icon = . -}}
+    {{ end }}
+    {{- $title := $context.Title | htmlEscape -}}
+    {{- $description := $context.Summary | htmlEscape -}}
+    {{- $permalink := $context.Permalink | htmlEscape -}}
+    {{- with $setup.separator -}}
+      {{- $separator = . -}}
+    {{- end -}}
+    {{- $link := printf "%s%s" $setup.link "?" -}}
+    {{- range $key, $value := $setup.particles -}}
+      {{- if eq $key "params" -}}
+        {{- $link = printf "%s%s%s" $permalink $separator $value -}}
+      {{- else -}}
+        {{- if eq $value "description" -}}
+          {{- $link = printf "%s%s%s=%s" $link $separator $key $description -}}
+        {{- else if eq $value "title" -}}
+          {{- $link = printf "%s%s%s=%s" $link $separator $key $title -}}
+        {{- else if eq $value "permalink" -}}
+          {{- $link = printf "%s%s%s=%s" $link $separator $key $permalink -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $sharetext := i18n (printf "share_on_%s" $network) -}}
+    <a class="is--sharebutton"
+      href="{{- $link -}}"
+      target="_blank"
+      rel="noopener"
+      aria-label="{{- $sharetext -}}">
+      {{- with site.Params.dnb.social.sharebuttons.icons -}}
+        <span aria-hidden="true" class="icon">
+          {{- partialCached "bsicon.html" $icon $icon -}}
+        </span>
+      {{- end -}}
+      {{- with site.Params.dnb.social.sharebuttons.sharetext -}}
+        {{- $sharetext -}}
+      {{- end -}}
+    </a>
+  {{- end -}}
+</div>

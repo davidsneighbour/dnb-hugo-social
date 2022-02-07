@@ -6,12 +6,16 @@ extended = false
 min = "0.84.0"
 
 [[module.mounts]]
-source = "layouts"
-target = "layouts"
+source = "data"
+target = "data"
 
 [[module.mounts]]
 source = "i18n"
 target = "i18n"
+
+[[module.mounts]]
+source = "layouts"
+target = "layouts"
 
 [[module.imports]]
 disable = false
@@ -24,3 +28,15 @@ disable = false
 ignoreConfig = false
 ignoreImports = false
 path = "github.com/dnb-org/dnb-hugo-debug"
+
+[[module.imports]]
+disable = false
+ignoreConfig = false
+ignoreImports = false
+path = "github.com/dnb-org/dnb-hugo-icons"
+
+[params.dnb.social]
+[params.dnb.social.sharebuttons]
+icons = true
+sharetext = true
+networks = ["facebook", "twitter", "linkedin"]
