@@ -1,0 +1,5 @@
+[dnb.social]
+[dnb.social.sharebuttons]
+icons = true
+sharetext = true
+networks = ["facebook", "twitter", "linkedin"]
