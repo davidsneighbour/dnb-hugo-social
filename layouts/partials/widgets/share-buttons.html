@@ -1,10 +1,13 @@
 {{- $context := . -}}
 
-{{ $networks := slice }}
-{{ with site.Params.dnb.social.sharebuttons.networks }}
-  {{ $networks = . }}
-{{ end }}
-{{ $setups := (where site.Data.dnb.social.shares.items "slug" "in" $networks)}}
+{{- $networks := slice -}}
+{{- with site.Params.dnb.social.sharebuttons.networks -}}
+  {{- $networks = . -}}
+{{- end -}}
+{{- $setups := (where site.Data.dnb.social.shares.items "slug" "in" $networks) -}}
+{{- /* This here is an ugly workaround for Hugo's missing sortByArray feature.
+       Cache it so it does not take away too much time. */ -}}
+{{- $setups = partialCached "func/sortNetworks.html" (dict "networks" $networks "setups" $setups) -}}
 
 <div class="is--sharebuttons">
   {{- range $network, $setup := $setups -}}
