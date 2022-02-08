@@ -1,19 +1,22 @@
-[items.facebook]
+[[items]]
+slug = "facebook"
 link = "https://facebook.com/sharer/sharer.php"
 icon = "facebook"
-[items.facebook.particles]
+[items.particles]
 u = "permalink"
 
-[items.twitter]
+[[items]]
+slug = "twitter"
 link = "https://twitter.com/intent/tweet/"
 icon = "twitter"
-[items.twitter.particles]
+[items.particles]
 text = "description"
 url = "permalink"
 
-[items.tumblr]
+[[items]]
+slug = "tumblr"
 link = "https://www.tumblr.com/widgets/share/tool"
-[items.tumblr.particles]
+[items.particles]
 canonicalUrl = "permalink"
 shareSource = "source"
 title = "title"
@@ -21,69 +24,78 @@ caption = "description"
 content = "description"
 params = "posttype=link"
 
-[items.email]
+[[items]]
+slug = "email"
 link = "mailto:"
 icon = "envelope"
-[items.email.particles]
+[items.particles]
 body = "permalink"
 subject = "title"
 
-[items.pinterest]
+[[items]]
+slug = "pinterest"
 link = "https://pinterest.com/pin/create/button/"
 icon = "pinterest"
-[items.pinterest.particles]
+[items.particles]
 url = "permalink"
 media = "permalink"
 description = "description"
 
-[items.linkedin]
+[[items]]
+slug = "linkedin"
 link = "https://www.linkedin.com/shareArticle"
 icon = "linkedin"
-[items.linkedin.particles]
+[items.particles]
 url = "permalink"
 title = "title"
 summary = "description"
 source = "permalink"
 params = "mini=true"
 
-[items.reddit]
+[[items]]
+slug = "reddit"
 link = "https://reddit.com/submit/"
 icon = "reddit"
-[items.reddit.particles]
+[items.particles]
 url = "permalink"
 title = "title"
 params = "resubmit=true"
 
-[items.xing]
+[[items]]
+slug = "xing"
 link = "https://www.xing.com/app/user"
 separator = ";"
-[items.xing.particles]
+[items.particles]
 url = "permalink"
 title = "title"
 params = "op=share"
 
-[items.whatsapp]
+[[items]]
+slug = "whatsapp"
 link = "whatsapp://send"
 linkintext = true
 icon = "whatsapp"
-[items.whatsapp.particles]
+[items.particles]
 text = "description"
 
-[items.hackernews]
+[[items]]
+slug = "hackernews"
 link = "https://news.ycombinator.com/submitlink"
-[items.hackernews.particles]
+[items.particles]
 u = "permalink"
 t = "description"
 
-[items.vkontakte]
+[[items]]
+slug = "vkontakte"
 link = "http://vk.com/share.php"
-[items.vkontakte.particles]
+[items.particles]
 title = "title"
 url = "permalink"
 
-[items.telegram]
+[[items]]
+slug = "telegram"
 link = "https://telegram.me/share/url"
 icon = "telegram"
-[items.telegram.particles]
+[items.particles]
 text = "description"
 url = "permalink"

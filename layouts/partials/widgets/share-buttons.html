@@ -4,11 +4,7 @@
 {{ with site.Params.dnb.social.sharebuttons.networks }}
   {{ $networks = . }}
 {{ end }}
-
- {{ $setups := site.Data.dnb.social.shares.items}}
-{{/*
-{{ $setups := $setups | intersect (where $setup in $networks) }} */}}
-
+{{ $setups := (where site.Data.dnb.social.shares.items "slug" "in" $networks)}}
 
 <div class="is--sharebuttons">
   {{- range $network, $setup := $setups -}}
@@ -37,7 +33,7 @@
         {{- end -}}
       {{- end -}}
     {{- end -}}
-    {{- $sharetext := i18n (printf "share_on_%s" $network) -}}
+    {{- $sharetext := i18n (printf "share_on_%s" $setup.slug) -}}
     <a class="is--sharebutton"
       href="{{- $link -}}"
       target="_blank"

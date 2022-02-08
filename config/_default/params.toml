@@ -2,4 +2,17 @@
 [dnb.social.sharebuttons]
 icons = true
 sharetext = true
-networks = ["facebook", "twitter", "linkedin"]
+networks = [
+  "facebook",
+  "twitter",
+  "tumblr",
+  "email",
+  "pinterest",
+  "linkedin",
+  "reddit",
+  "xing",
+  "whatsapp",
+  "hackernews",
+  "vkontakte",
+  "telegram",
+]
