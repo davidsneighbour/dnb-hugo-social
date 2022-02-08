@@ -11,7 +11,11 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/83281?v=4",
       "profile": "https://kollitsch.de",
       "contributions": [
-        "code"
+        "code",
+        "doc",
+        "ideas",
+        "maintenance",
+        "test"
       ]
     },
     {
