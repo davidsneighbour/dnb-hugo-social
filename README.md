@@ -40,7 +40,7 @@ Then add this module to your required modules in config.toml.
 [module]
 
 [[module.imports]]
-path = "github.com/dnb-org/dnb-hugo-giscus"
+path = "github.com/dnb-org/dnb-hugo-social"
 
 ```
 
@@ -50,7 +50,7 @@ The next time you run `hugo` it will download the latest version of the module.
 
 ```shell
 # update this module
-hugo mod get -u github.com/dnb-org/dnb-hugo-giscus
+hugo mod get -u github.com/dnb-org/dnb-hugo-social
 # update all modules
 hugo mod get -u ./...
 ```

@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/dnb-org/dnb-hugo-sitemap/compare/v0.0.7...v0.0.8) (2022-02-08)
+
+
+### Features
+
+* add network selection via configuration ([b876406](https://github.com/dnb-org/dnb-hugo-sitemap/commit/b876406b6b0874b2940039e2eb987babb7aa7741)), closes [#16](https://github.com/dnb-org/dnb-hugo-sitemap/issues/16)
+* sort networks by order in the configuration slice ([70fff82](https://github.com/dnb-org/dnb-hugo-sitemap/commit/70fff82b5a98038c78a797360c5048b3e0a8e0e2)), closes [#16](https://github.com/dnb-org/dnb-hugo-sitemap/issues/16)
+
+
+### Documentation
+
+* add LICENSE.md ([c0c8717](https://github.com/dnb-org/dnb-hugo-sitemap/commit/c0c871767914d9fde307546880aac656961fc91b))
+* wording ([bba8e56](https://github.com/dnb-org/dnb-hugo-sitemap/commit/bba8e563d408cb51dd7983261eb9d2b3310fea8d))
+
+
+### Chore
+
+* add docs creation to build script ([3b62e64](https://github.com/dnb-org/dnb-hugo-sitemap/commit/3b62e64572fc71357cae493ba189a1f987cdee3b))
+* **config:** move build config to build.json ([53fd0c5](https://github.com/dnb-org/dnb-hugo-sitemap/commit/53fd0c5ee919f619dd508f5a7abefd720c208641))
+* **config:** move Hugo configuration from config.toml to config directory ([9cb6c9c](https://github.com/dnb-org/dnb-hugo-sitemap/commit/9cb6c9c9714136c06b95885517fae205ca039f41))
+* **config:** remove vscode configuration ([91160a4](https://github.com/dnb-org/dnb-hugo-sitemap/commit/91160a410b17df8d98087035bc094ad63d4af94a))
+* **deps:** update dependencies ([ff1ad2e](https://github.com/dnb-org/dnb-hugo-sitemap/commit/ff1ad2e8bccecb7cbf29a7800666c269baded5d1))
+
 ### [0.0.7](https://github.com/dnb-org/dnb-hugo-sitemap/compare/v0.0.6...v0.0.7) (2022-02-07)
 
 
