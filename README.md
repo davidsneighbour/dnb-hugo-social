@@ -7,7 +7,7 @@
 
 # DNB GoHugo Component / Social
 
-Social Media functions for Hugo
+Social Media functionality for Hugo
 
 ## Installing
 
