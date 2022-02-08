@@ -107,8 +107,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-  <td align="center"><a href="https://kollitsch.de"><img src="https://avatars.githubusercontent.com/u/83281?v=4?s=100" width="64px;" alt=""/><br /><sub><b>Patrick Kollitsch</b></sub></a><br /><a href="https://github.com/dnb-org/dnb-hugo-social/commits?author=davidsneighbour" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/jmooring"><img src="https://avatars.githubusercontent.com/u/335669?v=4?s=100" width="64px;" alt=""/><br /><sub><b>Joe Mooring</b></sub></a><br /><a href="https://github.com/dnb-org/dnb-hugo-social/commits?author=jmooring" title="Code">💻</a></td>
+    <td align="center"><a href="https://kollitsch.de"><img src="https://avatars.githubusercontent.com/u/83281?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Patrick Kollitsch</b></sub></a><br /><a href="https://github.com/dnb-org/dnb-hugo-social/commits?author=davidsneighbour" title="Code">💻</a> <a href="https://github.com/dnb-org/dnb-hugo-social/commits?author=davidsneighbour" title="Documentation">📖</a> <a href="#ideas-davidsneighbour" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-davidsneighbour" title="Maintenance">🚧</a> <a href="https://github.com/dnb-org/dnb-hugo-social/commits?author=davidsneighbour" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/jmooring"><img src="https://avatars.githubusercontent.com/u/335669?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Joe Mooring</b></sub></a><br /><a href="https://github.com/dnb-org/dnb-hugo-social/commits?author=jmooring" title="Code">💻</a></td>
   </tr>
 </table>
 
