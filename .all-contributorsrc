@@ -2,9 +2,18 @@
   "files": [
     "README.md"
   ],
-  "imageSize": 100,
+  "imageSize": 64,
   "commit": false,
   "contributors": [
+    {
+      "login": "davidsneighbour",
+      "name": "Patrick Kollitsch",
+      "avatar_url": "https://avatars.githubusercontent.com/u/83281?v=4",
+      "profile": "https://kollitsch.de",
+      "contributions": [
+        "code"
+      ]
+    },
     {
       "login": "jmooring",
       "name": "Joe Mooring",
@@ -14,15 +23,6 @@
         "code"
       ]
     },
-    {
-      "login": "davidsneighbour",
-      "name": "Patrick Kollitsch",
-      "avatar_url": "https://avatars.githubusercontent.com/u/83281?v=4",
-      "profile": "https://kollitsch.de",
-      "contributions": [
-        "code"
-      ]
-    }
   ],
   "contributorsPerLine": 7,
   "projectName": "dnb-hugo-social",
