@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/dnb-org/dnb-hugo-sitemap/compare/v0.0.8...v0.0.9) (2022-02-22)
+
+
+### Features
+
+* open graph tags (WIP) ([a270059](https://github.com/dnb-org/dnb-hugo-sitemap/commit/a270059d2778ab85fae2ade9cc66ba191729c10c))
+
+
+### Documentation
+
+* add davidsneighbour as a contributor for code ([#19](https://github.com/dnb-org/dnb-hugo-sitemap/issues/19)) ([febeb8d](https://github.com/dnb-org/dnb-hugo-sitemap/commit/febeb8d91dee3ec8cbead5ba25c21c16c738bc8a))
+* add jmooring as a contributor for code ([#17](https://github.com/dnb-org/dnb-hugo-sitemap/issues/17)) ([7caaede](https://github.com/dnb-org/dnb-hugo-sitemap/commit/7caaede153977768499fc0b523959a07fd5d5d0a))
+* add more topics to davidsneighbour ;) ([7b5a4d1](https://github.com/dnb-org/dnb-hugo-sitemap/commit/7b5a4d170d22d9b6c6a998cd5079d3afc68afb10))
+* **fix:** add maintainer tag to davidsneighbour ([c88ea74](https://github.com/dnb-org/dnb-hugo-sitemap/commit/c88ea74e08e4390381c43d3f8785ee9e40d02bcb))
+* update contributors section and configuration ([e9fa2f5](https://github.com/dnb-org/dnb-hugo-sitemap/commit/e9fa2f5498fab6bb412a12bfc324299ea9b0908c))
+
+
+### Chore
+
+* add allcontributors script to repo ([35a3b82](https://github.com/dnb-org/dnb-hugo-sitemap/commit/35a3b823b50b8ab2b58161ac7a4e79716cbeebc7))
+* **deps:** update de ([735277b](https://github.com/dnb-org/dnb-hugo-sitemap/commit/735277b768ce4bf454883eda0053ed271f53dc40))
+
 ### [0.0.8](https://github.com/dnb-org/dnb-hugo-sitemap/compare/v0.0.7...v0.0.8) (2022-02-08)
 
 
