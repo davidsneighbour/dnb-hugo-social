@@ -1,4 +1,7 @@
 [dnb.social]
+[dnb.social.facebook]
+app_id = "1234567890"
+admins = "1234567890"
 [dnb.social.sharebuttons]
 icons = true
 sharetext = true
