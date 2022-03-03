@@ -54,7 +54,9 @@ The next time you run `hugo` it will download the latest version of the module.
 ```shell
 # update this module
 hugo mod get -u github.com/dnb-org/dnb-hugo-social
-# update all modules
+# update to a specific version
+hugo mod get -u github.com/dnb-org/dnb-hugo-social@v1.0.0
+# update all modules recursively over the whole project
 hugo mod get -u ./...
 ```
 <!--- INSTALLUPDATE END --->
