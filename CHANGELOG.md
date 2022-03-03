@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/dnb-org/dnb-hugo-sitemap/compare/v0.0.10...v0.0.11) (2022-03-03)
+
+
+### Features
+
+* fixes to twitter card tags ([972a8fe](https://github.com/dnb-org/dnb-hugo-sitemap/commit/972a8fe46cd16216081cd82a829ec6230daea76c))
+
 ### [0.0.10](https://github.com/dnb-org/dnb-hugo-sitemap/compare/v0.0.9...v0.0.10) (2022-03-03)
 
 
