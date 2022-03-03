@@ -1,26 +1,17 @@
 {{- $config := site.Data.dnb.social.twitter -}}
 {{- $page := false -}}
-{{- if .IsPage -}}{{- $page = true -}}{{- end -}}
-<!-- Twitter meta data generation.
-     see https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup for details                -->
-<!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards                          -->
-<!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image         -->
-<!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup                                -->
-<!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started                         -->
-<!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup                                -->
-<!-- *************************************************************************************************************** -->
+{{- if .IsPage -}}
+  {{- $page = true -}}
+{{- end -}}
 {{- if isset $config "profile" -}}
-<!-- without defining a profile name we won't need any twitter header tags                                           -->
-  <meta name="twitter:site" content="@{{- $config.profile -}}" />
-  <meta name="twitter:title" content="{{- .Title -}}" />
-{{/*  {{- range site.Authors -}}*/}}
-{{/*    {{- with .twitter -}}*/}}
-{{/*      <meta name="twitter:creator" content="@{{- . -}}"/>*/}}
-{{/*    {{- end -}}*/}}
-{{/*  {{- end -}}*/}}
-  {{- with $config.domain -}}
-    <meta name="twitter:domain" content="{{- . -}}" />
-  {{- end -}}
+<meta name="twitter:site" content="@{{- $config.profile -}}" />
+<meta name="twitter:title" content="{{- .Title -}}" />
+{{ with site.Author.twitter -}}
+  <meta name="twitter:creator" content="@{{- . -}}"/>
+{{ end -}}
+{{- with $config.domain -}}
+  <meta name="twitter:domain" content="{{- . -}}" />
+{{ end -}}
   <meta name="twitter:description" content="
     {{- with .Description -}}
       {{- . -}}
