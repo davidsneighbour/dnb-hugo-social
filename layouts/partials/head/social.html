@@ -1,6 +1,4 @@
-{{- printf "<!--############################################################################" | safeHTML }}
-{{ printf "    # @dnb-org/dnb-hugo-social" | safeHTML }}
-{{ printf "    ############################################################################-->" | safeHTML }}
+{{- partial "func/printCommentHeader.html" "@dnb-org/dnb-hugo-social" }}
 {{ partial "head/social/opengraph" . -}}
-{{/* {{- partial "head/social/schema" . -}}
-{{- partial "head/social/twitter" . -}} */}}
+{{/* {{- partial "head/social/schema" . -}} */}}
+{{- partial "head/social/twitter" . -}}
