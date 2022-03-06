@@ -1,53 +1,91 @@
+{{- /*
+
+
+```yaml
+twitter:
+  site: "twittername"
+  creator: "twittername"
+  card: "summary_large_image" # or summary, app, player
+  title: "override the title of the page"
+  description: "override the description of the page"
+  image: "https://example.com/image.jpg"
+  image:
+    src: "https://example.com/image.jpg"
+    alt: "description of the image"
+```
+
+```toml
+[dnb.social.twitter]
+  site: "twittername"
+  creator: "twittername"
+  card: "summary_large_image" # or summary, app, player
+  title: "override the title of the page"
+  description: "override the description of the page"
+  image: "https://example.com/image.jpg"
+  image:
+    src: "https://example.com/image.jpg"
+    alt: "description of the image"
+
+*/ -}}
+
+
+
 {{- $config := site.Data.dnb.social.twitter -}}
 {{- $page := false -}}
 {{- if .IsPage -}}
   {{- $page = true -}}
 {{- end -}}
-{{- if isset $config "profile" -}}
-<meta name="twitter:site" content="@{{- $config.profile -}}" />
-<meta name="twitter:title" content="{{- .Title -}}" />
-{{ with site.Author.twitter -}}
-  <meta name="twitter:creator" content="@{{- . -}}"/>
-{{ end -}}
-{{- with $config.domain -}}
-  <meta name="twitter:domain" content="{{- . -}}" />
-{{ end -}}
-  <meta name="twitter:description" content="
-    {{- with .Description -}}
-      {{- . -}}
-    {{- else -}}
-      {{- if $page -}}
-        {{- .Summary -}}
-      {{- else -}}
-        {{- with .Site.Params.description -}}
-          {{- . -}}
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}
-  "/>
-  <!-- check if image available is large enough                                                                      -->
-  {{- $card := "summary_large_image" -}}
-{{/*  {{- if eq $card "something" -}}*/}}
-{{/*    {{- $card = "summary" -}}*/}}
-{{/*  {{- end -}}*/}}
-  <meta name="twitter:card" content="{{- $card -}}" />
-  <!-- create images for twitter cards                                                                               -->
-  {{/*<meta name="twitter:image:src" content="{{ .Params.og_image }}"/>*/}}
-  {{ $resize := "876x438" }}
-  {{- with $.Params.images -}}
-    <meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
-  {{ else -}}
-    {{- $images := $.Resources.ByType "image" -}}
-    {{- $featured := $images.GetMatch "*feature*" -}}
-    {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
-      {{- with $featured -}}
-        <meta name="twitter:image" content="{{ $featured.Permalink }}"/>
-      {{- else -}}
-      {{- with $.Site.Params.images -}}
-        <meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
-      {{- end -}}
-    {{- end -}}
-  {{- end }}
-{{- else -}}
-  {{ warnf "There is no Twitter profile defined. You need to add a data/dnb/social/twitter.toml configuration!" . }}
+
+{{- $dict := dict -}}
+
+{{/* twitter:card */}}
+{{- $card := partialCached "head/social/twitter/get.html" (dict "context" . "key" "card" "default" "summary_large_image") . -}}
+{{- $cards := slice "summary" "summary_large_image" -}}
+{{- if not (in $cards $card) -}}
+  {{- $card = "summary" -}}
+  {{/* TODO: notice about this card type not being supported */}}
 {{- end -}}
+{{- $dict = $dict | merge ( dict "twitter:card" $card ) -}}
+
+{{/* twitter:title */}}
+{{- $dict = $dict | merge ( dict "twitter:title" .Title ) -}}{{/* Title of content (max 70 characters) */}}
+
+{{/* twitter:description */}}
+{{- $dict = $dict | merge ( dict "twitter:description" (partialCached "func/getDescription.html" . .) ) -}}{{/* Description of content (maximum 200 characters) */}}
+
+{{/* twitter:profile */}}
+{{- if isset $config "profile" -}}
+  {{- $dict = $dict | merge ( dict "twitter:site" (printf "@%s" $config.profile) ) -}}{{/* max 15 character s */}}
+{{- else -}}
+  {{- warnf "Please define your Twitter setup. You need to add a data/dnb/social/twitter.toml configuration!" . -}}
+{{- end -}}
+
+{{/* twitter:creator */}}
+{{- with site.Author.twitter -}}
+  {{- $dict = $dict | merge ( dict "twitter:creator" (printf "@%s" .) ) -}}
+{{- end -}}
+
+{{/* twitter:image */}}
+{{- $dict = $dict | merge ( dict "twitter:image" "" ) -}}{{/* URL of image to use in the card. Images must be less than 5MB in size. JPG, PNG, WEBP and GIF formats are supported. Only the first frame of an animated GIF will be used. SVG is not supported. */}}
+{{- $dict = $dict | merge ( dict "twitter:image:alt" "" ) -}}{{/* A text description of the image conveying the essential nature of an image to users who are visually impaired. Maximum 420 characters. */}}
+{{/*<meta name="twitter:image:src" content="{{ .Params.og_image }}"/>*/}}
+{{ $resize := "876x438" }}
+{{- with $.Params.images -}}
+  <meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
+{{ else -}}
+  {{- $images := $.Resources.ByType "image" -}}
+  {{- $featured := $images.GetMatch "*feature*" -}}
+  {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+    {{- with $featured -}}
+      <meta name="twitter:image" content="{{ $featured.Permalink }}"/>
+    {{- else -}}
+    {{- with $.Site.Params.images -}}
+      <meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
+    {{- end -}}
+  {{- end -}}
+{{- end }}
+
+{{- partial "func/printCommentHeader.html" "@dnb-org/dnb-hugo-social > twitter" }}
+{{ range $key, $value := $dict -}}
+  <meta name="{{$key}}" content="{{$value}}" />
+{{ end -}}
