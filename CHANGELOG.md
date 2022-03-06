@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/dnb-org/dnb-hugo-sitemap/compare/v0.0.11...v0.0.12) (2022-03-06)
+
+
+### Features
+
+* **layouts:** update twitter open graph ([7ca841d](https://github.com/dnb-org/dnb-hugo-sitemap/commit/7ca841d741c3c29d30043de7ea1c5cfa03498c96))
+
 ### [0.0.11](https://github.com/dnb-org/dnb-hugo-sitemap/compare/v0.0.10...v0.0.11) (2022-03-03)
 
 
