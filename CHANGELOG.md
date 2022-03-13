@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/dnb-org/dnb-hugo-sitemap/compare/v0.0.12...v0.0.13) (2022-03-13)
+
+
+### Bug Fixes
+
+* add inline share links and use querify to create share urls ([2aad3ea](https://github.com/dnb-org/dnb-hugo-sitemap/commit/2aad3eac3b4911fb59b0c77789a5fc3f0f530ce9))
+
 ### [0.0.12](https://github.com/dnb-org/dnb-hugo-sitemap/compare/v0.0.11...v0.0.12) (2022-03-06)
 
 
