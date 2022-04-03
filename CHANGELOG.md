@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.16](https://github.com/dnb-org/dnb-hugo-sitemap/compare/v0.0.15...v0.0.16) (2022-04-03)
+
+
+### Features
+
+* add twitter image tag ([f983b12](https://github.com/dnb-org/dnb-hugo-sitemap/commit/f983b12d7e8c621c7b572869cd7cc0564ae8561c))
+
 ### [0.0.15](https://github.com/dnb-org/dnb-hugo-sitemap/compare/v0.0.14...v0.0.15) (2022-04-03)
 
 
