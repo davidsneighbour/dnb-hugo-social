@@ -65,25 +65,10 @@ twitter:
   {{- $dict = $dict | merge ( dict "twitter:creator" (printf "@%s" .) ) -}}
 {{- end -}}
 
-{{/* twitter:image */}}
-{{- $dict = $dict | merge ( dict "twitter:image" "" ) -}}{{/* URL of image to use in the card. Images must be less than 5MB in size. JPG, PNG, WEBP and GIF formats are supported. Only the first frame of an animated GIF will be used. SVG is not supported. */}}
-{{- $dict = $dict | merge ( dict "twitter:image:alt" "" ) -}}{{/* A text description of the image conveying the essential nature of an image to users who are visually impaired. Maximum 420 characters. */}}
-{{/*<meta name="twitter:image:src" content="{{ .Params.og_image }}"/>*/}}
-{{ $resize := "876x438" }}
-{{- with $.Params.images -}}
-  <meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
-{{ else -}}
-  {{- $images := $.Resources.ByType "image" -}}
-  {{- $featured := $images.GetMatch "*feature*" -}}
-  {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
-    {{- with $featured -}}
-      <meta name="twitter:image" content="{{ $featured.Permalink }}"/>
-    {{- else -}}
-    {{- with $.Site.Params.images -}}
-      <meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
-    {{- end -}}
-  {{- end -}}
-{{- end }}
+{{ range first 1 (.Resources.ByType "image") }}
+  {{ $image := .Resize "1200x630" }}
+  {{- $dict = $dict | merge ( dict "twitter:image" $image.Permalink ) -}}
+{{ end }}
 
 {{- partial "func/printCommentHeader.html" "@dnb-org/dnb-hugo-social > twitter" }}
 {{ range $key, $value := $dict -}}
