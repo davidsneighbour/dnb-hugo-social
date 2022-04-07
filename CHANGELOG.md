@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/davidsneighbour/hugo-sitemap/compare/v0.1.1...v0.1.2) (2022-04-07)
+
+
+### Chore
+
+* **deps:** fix go module dependencies ([2a61f9d](https://github.com/davidsneighbour/hugo-sitemap/commit/2a61f9db9df3a0a86a31542b87911b4916ef2706))
+
 ### [0.1.1](https://github.com/davidsneighbour/hugo-sitemap/compare/v0.1.0...v0.1.1) (2022-04-07)
 
 ## [0.1.0](https://github.com/davidsneighbour/hugo-sitemap/compare/v0.0.17...v0.1.0) (2022-04-07)
