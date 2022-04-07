@@ -70,7 +70,7 @@ twitter:
   {{- $dict = $dict | merge ( dict "twitter:image" $image.Permalink ) -}}
 {{ end }}
 
-{{- partial "func/printCommentHeader.html" "@dnb-org/dnb-hugo-social > twitter" }}
+{{- partial "func/printCommentHeader.html" "@davidsneighbour/hugo-social > twitter" }}
 {{ range $key, $value := $dict -}}
   <meta name="{{$key}}" content="{{$value}}" />
 {{ end -}}
