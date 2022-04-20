@@ -30,8 +30,8 @@
     }
   ],
   "contributorsPerLine": 7,
-  "projectName": "dnb-hugo-social",
-  "projectOwner": "dnb-org",
+  "projectName": "hugo-social",
+  "projectOwner": "davidsneighbour",
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true
