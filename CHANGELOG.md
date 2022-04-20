@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/davidsneighbour/hugo-sitemap/compare/v0.1.2...v0.1.3) (2022-04-20)
+
+
+### Build System
+
+* update Github organization name & use newer NPM dependencies ([#36](https://github.com/davidsneighbour/hugo-sitemap/issues/36)) ([7f0b11f](https://github.com/davidsneighbour/hugo-sitemap/commit/7f0b11fa17434f7c8da28dc4833682b818852d69))
+
 ### [0.1.2](https://github.com/davidsneighbour/hugo-social/compare/v0.1.1...v0.1.2) (2022-04-07)
 
 
