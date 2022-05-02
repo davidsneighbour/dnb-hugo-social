@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/davidsneighbour/hugo-sitemap/compare/v0.1.3...v0.1.4) (2022-05-02)
+
+
+### Bug Fixes
+
+* meta tags should not explicitly close themselves ([285098a](https://github.com/davidsneighbour/hugo-sitemap/commit/285098a45cac60301aec68fc69b79913f68c7b1d))
+
 ### [0.1.3](https://github.com/davidsneighbour/hugo-sitemap/compare/v0.1.2...v0.1.3) (2022-04-20)
 
 
