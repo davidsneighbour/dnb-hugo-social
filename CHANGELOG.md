@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/davidsneighbour/hugo-sitemap/compare/v0.1.4...v0.1.5) (2022-07-24)
+
+
+### Chore
+
+* **config:** set dependabot to monthly checks ([9454264](https://github.com/davidsneighbour/hugo-sitemap/commit/945426474cf36be9b969f082f0007980bb788452))
+
 ### [0.1.4](https://github.com/davidsneighbour/hugo-sitemap/compare/v0.1.3...v0.1.4) (2022-05-02)
 
 
