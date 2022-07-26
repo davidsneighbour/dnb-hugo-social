@@ -1,5 +1,6 @@
 <!-- Open Graph meta data generation. see https://ogp.me/ for details    -->
 {{- warnf "calculating open graph data" -}}
+{{- $config := site.Params.dnb -}}
 {{- /*$#
 
 @var $page [boolean] - is this a page or a content-list?
@@ -72,14 +73,21 @@
     "content" (.Date | time.Format $iso8601)) -}}
 {{- end -}}
 
-{{ range first 1 (.Resources.ByType "image") }}
-{{ $image := .Resize "1200x630" }}
+{{ $image := "" }}
+{{- range first 1 (.Resources.ByType "image") -}}
+  {{- partial "debugprint" . -}}
+  {{- $image = .Resize "1200x630" -}}
+  {{- $metaProperties = $metaProperties | append (dict
+      "property" "og:image"
+      "content" $image.Permalink) -}}
 
-{{- $metaProperties = $metaProperties | append (dict
-    "property" "og:image"
-    "content" $image.Permalink) -}}
-{{ end }}
-
+{{- else -}}
+  {{- $image = resources.Get $config.pictures.default_image -}}
+  {{- $image = $image.Resize "1200x630" -}}
+  {{- $metaProperties = $metaProperties | append (dict
+      "property" "og:image"
+      "content" $image.Permalink) -}}
+{{- end -}}
 {{- /*
 
 TODO:
