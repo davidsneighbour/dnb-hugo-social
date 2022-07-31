@@ -75,7 +75,6 @@
 
 {{ $image := "" }}
 {{- range first 1 (.Resources.ByType "image") -}}
-  {{- partial "debugprint" . -}}
   {{- $image = .Resize "1200x630" -}}
   {{- $metaProperties = $metaProperties | append (dict
       "property" "og:image"
