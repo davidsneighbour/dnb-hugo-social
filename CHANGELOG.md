@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/davidsneighbour/hugo-sitemap/compare/v0.1.7...v0.1.8) (2022-08-23)
+
+
+### Bug Fixes
+
+* add default image only if it's defined ([49c93f2](https://github.com/davidsneighbour/hugo-sitemap/commit/49c93f2f422def46cf1bdf718fec3c0bd88f274c))
+
 ### [0.1.7](https://github.com/davidsneighbour/hugo-sitemap/compare/v0.1.6...v0.1.7) (2022-07-31)
 
 
