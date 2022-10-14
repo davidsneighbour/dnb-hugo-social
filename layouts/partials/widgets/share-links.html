@@ -9,6 +9,9 @@
        Cache it so it does not take away too much time. */ -}}
 {{- $setups = partialCached "func/sortNetworks.html" (dict "networks" $networks "setups" $setups) -}}
 
+<li class="list-inline-item">
+	{{ i18n "share_label" }}
+</li>
 {{- range $network, $setup := $setups -}}
   {{- $separator := "&" -}}
   {{ $icon := false }}
