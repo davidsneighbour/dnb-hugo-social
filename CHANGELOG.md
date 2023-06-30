@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.10](https://github.com/davidsneighbour/hugo-sitemap/compare/v0.1.9...v0.1.10) (2023-06-30)
+
+
+### Features
+
+* latest changes ([d4de8c1](https://github.com/davidsneighbour/hugo-sitemap/commit/d4de8c18bf6d287be5bfd972945025de634e38af))
+
+
+### Bug Fixes
+
+* recent updates ([4a9e521](https://github.com/davidsneighbour/hugo-sitemap/commit/4a9e5219c72ed2d72bddbce4af1f289f48cf1815))
+
+
+### Build System
+
+* **fix:** update release hooks ([05e4691](https://github.com/davidsneighbour/hugo-sitemap/commit/05e46910d6fa240d86da35fbd7fdf800c68058b4))
+
+
+### Chore
+
+* **deps:** fix and update dependencies ([7387e38](https://github.com/davidsneighbour/hugo-sitemap/commit/7387e38c2966b19d2065eea3b93609a0acd93f7e))
+* **fix:** proper config paths ([c978aa2](https://github.com/davidsneighbour/hugo-sitemap/commit/c978aa265e8c5ac7f31af29be2f8e0c62a39c0de))
+
 ### [0.1.9](https://github.com/davidsneighbour/hugo-sitemap/compare/v0.1.8...v0.1.9) (2022-08-23)
 
 
