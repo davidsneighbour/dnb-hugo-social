@@ -19,7 +19,8 @@
 {{- $dict = $dict | merge ( dict "twitter:card" $card ) -}}
 
 {{/* twitter:title */}}
-{{- $dict = $dict | merge ( dict "twitter:title" .Title ) -}}{{/* Title of content (max 70 characters) */}}
+{{- $dict = $dict | merge ( dict "twitter:title" .Title ) -}}
+{{- $dict = $dict | merge ( dict "twitter:text:title" .Title ) -}}{{/* Title of content (max 70 characters) */}}
 
 {{/* twitter:description */}}
 {{- $dict = $dict | merge ( dict "twitter:description" (partialCached "func/getDescription.html" . .) ) -}}{{/* Description of content (maximum 200 characters) */}}
