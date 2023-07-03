@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.14](https://github.com/davidsneighbour/hugo-sitemap/compare/v0.1.9...v0.1.14) (2023-07-03)
+
+
+### Features
+
+* latest changes ([d4de8c1](https://github.com/davidsneighbour/hugo-sitemap/commit/d4de8c18bf6d287be5bfd972945025de634e38af))
+
+
+### Bug Fixes
+
+* opengraph and image tag ([e9598ad](https://github.com/davidsneighbour/hugo-sitemap/commit/e9598adcf5c1dc298f1417d1490054f88fa9a618))
+* recent updates ([4a9e521](https://github.com/davidsneighbour/hugo-sitemap/commit/4a9e5219c72ed2d72bddbce4af1f289f48cf1815))
+* twitter card fixes, other fixes ([6ee358e](https://github.com/davidsneighbour/hugo-sitemap/commit/6ee358eed0a6ae8421fdc2f637f7c4f558176cbb))
+* use page object for twitter title ([b866669](https://github.com/davidsneighbour/hugo-sitemap/commit/b866669e2ac361ab1fc40b2a923d7f8b8317c505))
+
+
+### Build System
+
+* **fix:** update release hooks ([05e4691](https://github.com/davidsneighbour/hugo-sitemap/commit/05e46910d6fa240d86da35fbd7fdf800c68058b4))
+
+
+### Chore
+
+* **config:** add renovate configuration ([b75a3f3](https://github.com/davidsneighbour/hugo-sitemap/commit/b75a3f3a46b913200e5b74ce4313a502d9178166))
+* **config:** cleanup config and build system ([c3a01d7](https://github.com/davidsneighbour/hugo-sitemap/commit/c3a01d7aee5314112d72a1765768f61214d68c9b))
+* **deps:** fix and update dependencies ([7387e38](https://github.com/davidsneighbour/hugo-sitemap/commit/7387e38c2966b19d2065eea3b93609a0acd93f7e))
+* **deps:** static dependencies ([069b679](https://github.com/davidsneighbour/hugo-sitemap/commit/069b6795ce697adb3246f2616c93eb0f984bb943))
+* **fix:** proper config paths ([c978aa2](https://github.com/davidsneighbour/hugo-sitemap/commit/c978aa265e8c5ac7f31af29be2f8e0c62a39c0de))
+* **release:** v0.1.10 ([a0dd969](https://github.com/davidsneighbour/hugo-sitemap/commit/a0dd969f504a1808ce8b4af88c5bacae42043438))
+* **release:** v0.1.11 ([87b10b9](https://github.com/davidsneighbour/hugo-sitemap/commit/87b10b9dfe520af646f1f42c322bb92fbbb18929))
+* **release:** v0.1.12 ([d316ea6](https://github.com/davidsneighbour/hugo-sitemap/commit/d316ea6233adba897cfcf32371bf1550577ea27f))
+* **release:** v0.1.13 ([0beed67](https://github.com/davidsneighbour/hugo-sitemap/commit/0beed675ee255eaa35cb9c49fdc9c1db4c1ec771))
+
 ### [0.1.13](https://github.com/davidsneighbour/hugo-sitemap/compare/v0.1.9...v0.1.13) (2023-07-03)
 
 
